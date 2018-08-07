@@ -6,7 +6,9 @@ html, body {
 body {
   font-family: "Open Sans", Arial, sans-serif;
   font-size: 16px;
-  background-color: #111; }
+  background-color: #111;
+  width: 100%;
+  overflow-x: hidden; }
   body .sub-title {
     font-size: 2rem;
     color: white;
@@ -42,9 +44,7 @@ section#home {
   justify-content: center;
   align-items: center;
   margin-bottom: 280px;
-  z-index: 2;
-  position: relative;
-  overflow-x: hidden; }
+  position: relative; }
   section#home .nav-bar {
     width: 100%;
     position: fixed;
@@ -92,7 +92,6 @@ section#home {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 4rem;
     position: relative; }
     section#home .home-wrapper #intro {
       position: relative;
@@ -104,7 +103,8 @@ section#home {
       align-items: center;
       background-image: url(./../img/back_light.jpg);
       background-size: cover;
-      background-attachment: fixed; }
+      background-attachment: fixed;
+      z-index: -1; }
       section#home .home-wrapper #intro .intro-box {
         display: flex;
         flex-direction: column;
@@ -115,8 +115,7 @@ section#home {
         background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 43%, rgba(255, 255, 255, 0.8) 56%, rgba(255, 255, 255, 0) 100%);
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 43%, rgba(255, 255, 255, 0.8) 56%, rgba(255, 255, 255, 0) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00feffff', endColorstr='#00ffffff',GradientType=0 );
-        width: 100vw;
-        padding: 0rem 0 5rem; }
+        width: 100vw; }
         @media (min-width: 801px) {
           section#home .home-wrapper #intro .intro-box {
             position: fixed; } }
@@ -138,7 +137,9 @@ section#home {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center; }
+      justify-content: center;
+      overflow-x: hidden;
+      box-sizing: border-box; }
       section#home .home-wrapper #audiobooks p {
         color: #ccc;
         margin-bottom: 3rem; }
@@ -158,7 +159,8 @@ section#home {
             height: 100%;
             position: absolute;
             transform-style: preserve-3d;
-            animation: rotation 20s infinite linear; }
+            animation: rotation 20s infinite linear;
+            transition: all 200ms ease-in-out; }
             section#home .home-wrapper #audiobooks .top-selection .container #carousel:hover {
               animation-play-state: paused; }
             section#home .home-wrapper #audiobooks .top-selection .container #carousel figure {
@@ -170,7 +172,8 @@ section#home {
               top: 10px;
               background: black;
               overflow: hidden;
-              -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5))); }
+              -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5)));
+              transition: transform 200ms ease-in-out; }
               section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(1) {
                 transform: rotateY(0deg) translateZ(288px); }
               section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(2) {
@@ -212,9 +215,9 @@ section#home {
         color: #111; }
         section#home .home-wrapper #labels .label-container .label-list {
           margin-bottom: 2rem; }
-    section#home .home-wrapper #impressum {
+    section#home .home-wrapper .impressum-container {
       text-align: center;
-      color: #aaa;
+      color: #333;
       font-size: 1rem;
       font-weight: 300;
       padding-bottom: 2rem;
@@ -223,4 +226,9 @@ section#home {
       bottom: 0;
       left: 0;
       right: 0;
-      background: #222; }
+      height: 250px;
+      background: #fff; }
+      section#home .home-wrapper .impressum-container .sub-title {
+        color: #222; }
+      section#home .home-wrapper .impressum-container.hidden {
+        display: none; }

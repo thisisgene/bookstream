@@ -8,10 +8,12 @@ section#home
   justify-content: center
   align-items: center
   margin-bottom: 280px
-  z-index: 2
+  //z-index: -2
   position: relative
-  overflow-x: hidden
+  //overflow-x: hidden
+
   .nav-bar
+    //box-sizing: border-box
 
     //box-shadow: 0 0 15px rgba(0,0,0,.8)
     width: 100%
@@ -67,10 +69,9 @@ section#home
     justify-content: center
     align-items: center
     //width: 100vw
-    padding: 0 4rem
+    //padding: 0 4rem
     //background: #111
     position: relative
-
     #intro
       position: relative
       width: 100vw
@@ -83,7 +84,9 @@ section#home
         image: url(./../img/back_light.jpg)
         size: cover
         attachment: fixed
+      z-index: -1
       //box-shadow: 0 0 2rem rgba(0,0,0,0.8)
+
 
       .intro-box
         @media(min-width: 801px)
@@ -98,7 +101,7 @@ section#home
         background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,$gradient-color 43%,$gradient-color 56%,rgba(255,255,255,0) 100%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00feffff', endColorstr='#00ffffff',GradientType=0 )
         width: 100vw
-        padding: 0rem 0 5rem
+
         .logo
           width: 40vw
           @media(max-width: 800px)
@@ -121,6 +124,8 @@ section#home
       flex-direction: column
       align-items: center
       justify-content: center
+      overflow-x: hidden
+      box-sizing: border-box
       p
         color: #ccc
         margin-bottom: 3rem
@@ -143,7 +148,7 @@ section#home
             position: absolute
             transform-style: preserve-3d
             animation: rotation 20s infinite linear
-
+            transition: all 200ms ease-in-out
             &:hover
               animation-play-state: paused
 
@@ -158,6 +163,7 @@ section#home
               overflow: hidden
               //border: solid 5px black
               -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5)))
+              transition: transform 200ms ease-in-out
 
 
               &:nth-child(1)
@@ -178,10 +184,9 @@ section#home
                 cursor: pointer
                 transition: all .5s ease
                 width: 100%
+                //&:hover
 
-                &:hover
-                  //filter: grayscale(0)
-                  //transform: scale(1.2,1.2)
+
 
 
           @keyframes rotation
@@ -215,9 +220,9 @@ section#home
         .label-list
           margin-bottom: 2rem
 
-    #impressum
+    .impressum-container
       text-align: center
-      color: #aaa
+      color: #333
       font:
         size: 1rem
         weight: 300
@@ -227,6 +232,28 @@ section#home
       bottom: 0
       left: 0
       right: 0
-      background: #222
+      height: 250px
+      background: #fff
+      .sub-title
+        color: #222
+
+      &.hidden
+        display: none
+
+      //&.collapsed
+      //  transform: translateY(240px)
+      //  background: rgba(white, .5)
+      //  transition: all 200ms ease-in-out
+      //  display: none
+      //  .sub-title
+      //    transform: translateY(-30px) scale(.8)
+      //    transition: transform 200ms ease-in-out
+      //
+      //  &:hover
+      //    background: rgba(white, 1)
+      //    transform: translateY(0)
+      //    .sub-title
+      //      transform: translateY(0) scale(1)
+
 
 

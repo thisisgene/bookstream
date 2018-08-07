@@ -14,6 +14,12 @@ $(window).scroll(function(e) {
   // intro.css('-webkit-transform', 'translateY('+ opacity * 130+'px)');
 
   menu.css('-webkit-filter', 'invert('+ opacity +')');
+  if (opacity >= 2) {
+    $('.impressum-container').removeClass('hidden');
+  }
+  if (opacity <= 1.9) {
+    $('.impressum-container').addClass('hidden');
+  }
   // }
 });
 
