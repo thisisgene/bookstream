@@ -26,13 +26,13 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="pug" value="667" />
+          <entry key="pug" value="669" />
           <entry key="sass" value="2407" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Jade" value="667" />
+          <entry key="Jade" value="669" />
           <entry key="Sass" value="2407" />
         </counts>
       </usages-collector>
@@ -222,12 +222,12 @@
       <workItem from="1512391862842" duration="567000" />
       <workItem from="1532699740995" duration="1604000" />
       <workItem from="1533039685936" duration="2000" />
-      <workItem from="1533635085918" duration="11309000" />
+      <workItem from="1533635085918" duration="11355000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13482000" />
+    <option name="totallyTimeSpent" value="13528000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="6" />
