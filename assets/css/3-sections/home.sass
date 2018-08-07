@@ -9,14 +9,18 @@ section#home
   align-items: center
 
   .nav-bar
-    background: #111
+    background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(50,50,50,0.2) 76%) /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(50,50,50,0.2) 76%) /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0) 50%, rgba(50,50,50,0.2) 76%) /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00feffff', endColorstr='#00ffffff',GradientType=0 )
+
     //box-shadow: 0 0 15px rgba(0,0,0,.8)
     width: 100vw
     position: fixed
     top: 0
     z-index: 1000
     height: 50px
-    display: flex
+    display: flex         // NAV none/flex
     flex-direction: row
     justify-content: center
     align-items: center
@@ -37,7 +41,8 @@ section#home
         text-align: center
 
       .nav-logo
-        height: 40px
+        height: 30px
+        opacity: 0
         @media(min-width: 801px)
           margin-left: 2rem
 
@@ -53,6 +58,8 @@ section#home
           margin-left: 1rem
           &:first-child
             margin-left: 0
+        @media(max-width: 800px)
+          display: none
 
   .home-wrapper
     display: flex
@@ -60,7 +67,7 @@ section#home
     justify-content: center
     align-items: center
     //width: 100vw
-    padding: 3rem 4rem
+    padding: 0 4rem
     //background: #111
 
 
@@ -92,16 +99,19 @@ section#home
         .logo
           width: 40vw
           @media(max-width: 800px)
-            display: none
+            width: 80vw
           img
             width: 100%
             filter: drop-shadow(0 0 .6rem rgba(white, .3))
 
+        .sub-logo
+          margin: 0 0 0rem
+          letter-spacing: 2px
         .intro
           width: 60vw
           color: #111
           font-weight: 400
-          letter-spacing: 1px
+          letter-spacing: .5
           text-align: center
 
           .mobile-fat
@@ -114,7 +124,7 @@ section#home
             background: darken(#6DDAFE, 10%)
             padding: 1rem 2rem
             //border: 3px solid white
-            //border-radius: 4px
+            border-radius: 4px
             box-shadow: 0px 4px rgba(black, .4)
             color: white
             font-size: 1.4rem
@@ -203,3 +213,15 @@ section#home
             width: 100%
             -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5)))
       .add-selection
+    #labels
+      z-index: 200
+      width: 100vw
+      background: #6DDAFE
+
+      .label-container
+        text-align: center
+        padding-bottom: 2rem
+        color: #111
+        .label-list
+          list-style: none
+          padding: 0

@@ -84,6 +84,19 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/assets\/css\/3-sections\/mobile-nav.sass": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 2,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/assets\/css\/3-sections\/mobile-nav.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
 	"\/assets\/css\/main.css": {
 		"aP": 1,
 		"bl": 0,
@@ -239,6 +252,28 @@
 		"oT": 1,
 		"q": 100
 		},
+	"\/assets\/img\/logo_plainS_new.png": {
+		"ft": 32768,
+		"iS": 28482,
+		"oA": 0,
+		"oAP": "\/assets\/img\/logo_plainS_new.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"\/assets\/img\/logo_sub.png": {
+		"ft": 32768,
+		"iS": 44209,
+		"oA": 0,
+		"oAP": "\/assets\/img\/logo_sub.png",
+		"oF": 0,
+		"oIPL": 1,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/img\/logo_wide.png": {
 		"ft": 32768,
 		"iS": 61076,
@@ -253,9 +288,19 @@
 	"\/assets\/js\/jquery-3.2.1.min.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/assets\/js\/jquery-3.2.1.min-min.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/assets\/js\/script-min.js": {
+		"ft": 64,
+		"ma": 0,
+		"mi": 0,
+		"oA": 0,
+		"oAP": "\/assets\/js\/script-min-min.js",
 		"oF": 0,
 		"sC": 1,
 		"tS": 0
@@ -263,7 +308,7 @@
 	"\/assets\/js\/script.js": {
 		"ft": 64,
 		"ma": 0,
-		"mi": 1,
+		"mi": 0,
 		"oA": 0,
 		"oAP": "\/assets\/js\/script-min.js",
 		"oF": 0,
@@ -2187,7 +2232,7 @@
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
 		"createSourceMap": 0,
-		"minifyOutput": 1,
+		"minifyOutput": 0,
 		"syntaxCheckerStyle": 1,
 		"transpilerStyle": 0
 		},
