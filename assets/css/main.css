@@ -104,7 +104,7 @@ section#home {
       background-image: url(./../img/back_light.jpg);
       background-size: cover;
       background-attachment: fixed;
-      z-index: -1; }
+      z-index: 0; }
       section#home .home-wrapper #intro .intro-box {
         display: flex;
         flex-direction: column;
@@ -130,6 +130,8 @@ section#home {
         section#home .home-wrapper #intro .intro-box .intro {
           color: #111;
           margin: 1rem 0; }
+        section#home .home-wrapper #intro .intro-box .cta {
+          z-index: 10; }
     section#home .home-wrapper #audiobooks {
       width: 100vw;
       padding: 4rem;
@@ -222,7 +224,7 @@ section#home {
       font-size: 1rem;
       font-weight: 300;
       padding-bottom: 2rem;
-      z-index: -1;
+      z-index: 1;
       position: fixed;
       bottom: 0;
       left: 0;
