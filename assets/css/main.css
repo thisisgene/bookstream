@@ -1,25 +1,52 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,500,600");
 html, body {
   margin: 0;
-  padding: 0;
+  padding: 0; }
+
+body {
   font-family: "Open Sans", Arial, sans-serif;
-  background-color: rgba(0, 0, 0, 0.9);
-  overflow-x: hidden; }
-  html .sub-title, body .sub-title {
+  font-size: 16px;
+  background-color: #111; }
+  body .sub-title {
     font-size: 2rem;
     color: white;
     text-align: center;
     font-weight: lighter;
     margin-bottom: 3rem; }
+  body ul {
+    list-style: none;
+    padding: 0; }
+  body .main-text {
+    width: 60vw;
+    font-weight: 400;
+    letter-spacing: .5;
+    text-align: center; }
+    body .main-text .mobile-fat {
+      font-weight: bold; }
+  body .cta {
+    margin-top: 1rem; }
+    body .cta .cta-button {
+      text-decoration: none;
+      background: #3acdfe;
+      padding: 1rem 2rem;
+      border-radius: 4px;
+      box-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+      color: white;
+      font-size: 1.4rem;
+      text-transform: uppercase; }
 
 section#home {
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 280px;
+  z-index: 2;
+  position: relative;
+  overflow-x: hidden; }
   section#home .nav-bar {
-    width: 100vw;
+    width: 100%;
     position: fixed;
     top: 0;
     z-index: 1000;
@@ -33,7 +60,7 @@ section#home {
         height: auto;
         padding: .5rem 0; } }
     section#home .nav-bar .nav-wrapper {
-      width: 80vw;
+      width: 80%;
       max-width: 920px;
       display: flex;
       flex-direction: row;
@@ -65,8 +92,10 @@ section#home {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0 4rem; }
-    section#home .home-wrapper #intro-container {
+    padding: 0 4rem;
+    position: relative; }
+    section#home .home-wrapper #intro {
+      position: relative;
       width: 100vw;
       height: 100vh;
       display: flex;
@@ -76,7 +105,7 @@ section#home {
       background-image: url(./../img/back_light.jpg);
       background-size: cover;
       background-attachment: fixed; }
-      section#home .home-wrapper #intro-container .intro-box {
+      section#home .home-wrapper #intro .intro-box {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -88,40 +117,31 @@ section#home {
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00feffff', endColorstr='#00ffffff',GradientType=0 );
         width: 100vw;
         padding: 0rem 0 5rem; }
-        section#home .home-wrapper #intro-container .intro-box .logo {
+        @media (min-width: 801px) {
+          section#home .home-wrapper #intro .intro-box {
+            position: fixed; } }
+        section#home .home-wrapper #intro .intro-box .logo {
           width: 40vw; }
           @media (max-width: 800px) {
-            section#home .home-wrapper #intro-container .intro-box .logo {
+            section#home .home-wrapper #intro .intro-box .logo {
               width: 80vw; } }
-          section#home .home-wrapper #intro-container .intro-box .logo img {
+          section#home .home-wrapper #intro .intro-box .logo img {
             width: 100%;
             filter: drop-shadow(0 0 0.6rem rgba(255, 255, 255, 0.3)); }
-        section#home .home-wrapper #intro-container .intro-box .sub-logo {
-          margin: 0 0 0rem;
-          letter-spacing: 2px; }
-        section#home .home-wrapper #intro-container .intro-box .intro {
-          width: 60vw;
-          color: #111;
-          font-weight: 400;
-          letter-spacing: .5;
-          text-align: center; }
-          section#home .home-wrapper #intro-container .intro-box .intro .mobile-fat {
-            font-weight: bold; }
-        section#home .home-wrapper #intro-container .intro-box .cta {
-          margin-top: 1rem; }
-          section#home .home-wrapper #intro-container .intro-box .cta .cta-button {
-            text-decoration: none;
-            background: #3acdfe;
-            padding: 1rem 2rem;
-            border-radius: 4px;
-            box-shadow: 0px 4px rgba(0, 0, 0, 0.4);
-            color: white;
-            font-size: 1.4rem;
-            text-transform: uppercase; }
+        section#home .home-wrapper #intro .intro-box .intro {
+          color: #111; }
     section#home .home-wrapper #audiobooks {
       width: 100vw;
-      padding-top: 4rem;
-      background: #111; }
+      padding: 4rem;
+      background: #111;
+      z-index: 120;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      section#home .home-wrapper #audiobooks p {
+        color: #ccc;
+        margin-bottom: 3rem; }
       section#home .home-wrapper #audiobooks .top-selection {
         display: flex;
         flex-direction: row;
@@ -184,11 +204,23 @@ section#home {
     section#home .home-wrapper #labels {
       z-index: 200;
       width: 100vw;
-      background: #6DDAFE; }
+      background: #b4ecfe;
+      padding-top: 3rem; }
       section#home .home-wrapper #labels .label-container {
         text-align: center;
         padding-bottom: 2rem;
         color: #111; }
         section#home .home-wrapper #labels .label-container .label-list {
-          list-style: none;
-          padding: 0; }
+          margin-bottom: 2rem; }
+    section#home .home-wrapper #impressum {
+      text-align: center;
+      color: #aaa;
+      font-size: 1rem;
+      font-weight: 300;
+      padding-bottom: 2rem;
+      z-index: -1;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #222; }

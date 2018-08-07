@@ -3,13 +3,16 @@
 $(window).scroll(function(e) {
   let doc = $(document);
   let nav = $('.nav-bar');
-  let logo = $('.nav-logo');
+  let navLogo = $('.nav-logo');
   let menu = $('.nav-menu a');
+  let intro = $('.intro-box');
   // if (doc.scrollTop() <= 180) {
   let opacity = doc.scrollTop() / 180;
-  console.log(opacity);
   nav.css('background', 'rgba(0,0,0,'+opacity+')' );
-  logo.css('opacity', opacity);
+  navLogo.css('opacity', opacity);
+  intro.css('opacity', 1.3 - opacity/2);
+  // intro.css('-webkit-transform', 'translateY('+ opacity * 130+'px)');
+
   menu.css('-webkit-filter', 'invert('+ opacity +')');
   // }
 });
@@ -32,12 +35,13 @@ $.mark = {
       let thespeed = 1000;
       let offset = $(target).offset().top;
 
-      // $('.link--active').removeClass('link--active');
-      // jumpobj.addClass('link--active');
+      $('.link--active').removeClass('link--active');
+      jumpobj.addClass('link--active');
 
-      $('body, html').stop().animate({
+      $('html,body').animate({
+
         scrollTop: offset
-      }, thespeed, 'swing');
+      }, thespeed);
       e.preventDefault();
     });
   }

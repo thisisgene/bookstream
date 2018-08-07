@@ -2,7 +2,8 @@ section#home
   .nav-bar
     .nav-wrapper
       .nav-logo
-        img(src='assets/img/logo_plainS_new.png')
+        a.scroll-on-page-link(href='#intro')
+          img(src='assets/img/logo_plainS_new.png')
         //p Book Stream
       .nav-menu
         a.scroll-on-page-link(href='#audiobooks') Hörbücher
@@ -10,21 +11,23 @@ section#home
         a.scroll-on-page-link(href='#impressum') Impressum
   .home-wrapper
     //h1 Welcome to
-    #intro-container
+    #intro
       .intro-box
         .logo
           img(src='assets/img/logo_sub.png')
         //h4.sub-logo digital audiobooks
-        .intro
+        .intro.main-text
           p
             span.mobile-fat Bookstream&nbsp;
-            | ist ein junger und stetig wachsender Hörbuchverlag mit Fokus auf den digitalen Streaming-Markt. Der Firmensitz ist in Wien. Seit 2016 veröffentlichen wir aktuelle und Klassikerhörbücher online auf allen gängigen Streaming- und Downloadplattformen. Unsere Hörbücher erscheinen in vielen verschiedenen Sprachen, unter anderem auf Deutsch, Englisch, Spanisch oder Chinesisch und sind online weltweit verfügbar.
+            | ist ein junger und stetig wachsender Hörbuchverlag mit Fokus auf den digitalen Streaming-Markt. Der Firmensitz ist in Wien. Seit 2016 veröffentlichen wir aktuelle und Klassikerhörbücher online auf allen gängigen Streaming- und Downloadplattformen.
 
         .cta
-          a.cta-button(href='#audiobooks') Zu den Hörbüchern
+          a.cta-button.scroll-on-page-link(href='#audiobooks') Zu den Hörbüchern
 
     #audiobooks
       h2.sub-title Hörbücher
+      .main-text
+        p Unsere Hörbücher erscheinen in vielen verschiedenen Sprachen, unter anderem auf Deutsch, Englisch, Spanisch oder Chinesisch und sind online weltweit verfügbar.
       .top-selection
         //.sel.sel-1
         //  img(src='../assets/img/audiobooks/AB1.png')
@@ -48,7 +51,10 @@ section#home
             figure
               img(src='assets/img/audiobooks/AB6.png', alt='')
 
-
+      .cta-audiobooks
+        p Diese und noch viele weitere auf
+        .cta
+          a.cta-button(href='#') Link zu Playlist
       //.add-selection
       //  .sel
       //    iframe(src='https://open.spotify.com/embed?uri=spotify:album:3JyyBYCWCaWoXtiDF7B85p', width='300', height='80', frameborder='0', allowtransparency='true', allow='encrypted-media')
@@ -94,16 +100,22 @@ section#home
           li Thai Literature Audiobooks
           li Waldenberger Audio
           li zenPpat
-        br
         h3 Musik
         ul.label-list
           li Ron Records
           li Piepton
-        br
         h3 eBook
         ul.label-list
           li Der Drehbuchverlag
           li Redtenbacher Medical Publishing
 
     #impressum
+      .impressum-container
+        h2.sub-title Impressum
+        ul.imp-list
+          li Bookstream 
+          li Hörbücher für den digitalen Markt
+          li Philip Waldenberger & Jan Zenker
+          li Fenzlgasse 5/14, 1150 Wien
+          li office@bookstream.at
 

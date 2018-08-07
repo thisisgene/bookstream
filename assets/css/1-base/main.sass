@@ -3,9 +3,12 @@
 html, body
   margin: 0
   padding: 0
-  font-family: "Open Sans", Arial, sans-serif
-  background-color: rgba(black, .9)
-  overflow-x: hidden
+
+body
+  font:
+    family: "Open Sans", Arial, sans-serif
+    size: 16px
+  background-color: #111
 
 
   .sub-title
@@ -14,3 +17,29 @@ html, body
     text-align: center
     font-weight: lighter
     margin-bottom: 3rem
+
+  ul
+    list-style: none
+    padding: 0
+
+  .main-text
+    width: 60vw
+    font-weight: 400
+    letter-spacing: .5
+    text-align: center
+
+    .mobile-fat
+      font-weight: bold
+
+  .cta
+    margin-top: 1rem
+    .cta-button
+      text-decoration: none
+      background: darken(#6DDAFE, 10%)
+      padding: 1rem 2rem
+      //border: 3px solid white
+      border-radius: 4px
+      box-shadow: 0px 4px rgba(black, .4)
+      color: white
+      font-size: 1.4rem
+      text-transform: uppercase
