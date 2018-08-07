@@ -1,8 +1,6 @@
-$(document).ready(function(){
-  $.mark.jump();
-});
 
-$(document).scroll(function(e) {
+
+$(window).scroll(function(e) {
   let doc = $(document);
   let nav = $('.nav-bar');
   let logo = $('.nav-logo');
@@ -10,16 +8,16 @@ $(document).scroll(function(e) {
   // if (doc.scrollTop() <= 180) {
   let opacity = doc.scrollTop() / 180;
   console.log(opacity);
-  nav.css('background', 'rgba(0,0,0,'+opacity+')' )
-  logo.css('opacity', opacity)
-  menu.css('-webkit-filter', 'invert('+ opacity +')')
+  nav.css('background', 'rgba(0,0,0,'+opacity+')' );
+  logo.css('opacity', opacity);
+  menu.css('-webkit-filter', 'invert('+ opacity +')');
   // }
 });
 
 
 $.mark = {
   jump: function (options) {
-    var defaults = {
+    let defaults = {
       selector: 'a.scroll-on-page-link'
     };
     if (typeof options === 'string') {
@@ -29,22 +27,23 @@ $.mark = {
     options = $.extend(defaults, options);
     return $(options.selector).click(function (e) {
 
-      var jumpobj = $(this);
-      var target = jumpobj.attr('href');
-      var thespeed = 1000;
-      var offset = $(target).offset().top;
-      console.log(offset);
-      $('.link--active').removeClass('link--active');
-      jumpobj.addClass('link--active');
-      // clickToActivate = true;
+      let jumpobj = $(this);
+      let target = jumpobj.attr('href');
+      let thespeed = 1000;
+      let offset = $(target).offset().top;
 
-      $('html,body').animate({
+      // $('.link--active').removeClass('link--active');
+      // jumpobj.addClass('link--active');
+
+      $('body, html').stop().animate({
         scrollTop: offset
-      }, thespeed, 'swing', function(){
-        // setTimeout(function(){clickToActivate = false;}, 100);
-      });
+      }, thespeed, 'swing');
       e.preventDefault();
     });
   }
 };
+
+$(document).ready(function(){
+  $.mark.jump();
+});
 
