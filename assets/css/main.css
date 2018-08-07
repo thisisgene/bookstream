@@ -128,7 +128,8 @@ section#home {
             width: 100%;
             filter: drop-shadow(0 0 0.6rem rgba(255, 255, 255, 0.3)); }
         section#home .home-wrapper #intro .intro-box .intro {
-          color: #111; }
+          color: #111;
+          margin: 1rem 0; }
     section#home .home-wrapper #audiobooks {
       width: 100vw;
       padding: 4rem;
