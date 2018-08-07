@@ -1,0 +1,176 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,600");
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, Arial, sans-serif;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden; }
+  html .sub-title, body .sub-title {
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    font-weight: lighter;
+    margin-bottom: 3rem; }
+
+section#home {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  section#home .nav-bar {
+    background: #111;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+    @media (max-width: 800px) {
+      section#home .nav-bar {
+        height: auto;
+        padding: .5rem 0; } }
+    section#home .nav-bar .nav-wrapper {
+      width: 80vw;
+      max-width: 920px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between; }
+      @media (max-width: 800px) {
+        section#home .nav-bar .nav-wrapper {
+          display: block;
+          text-align: center; } }
+      section#home .nav-bar .nav-wrapper .nav-logo {
+        height: 40px; }
+        @media (min-width: 801px) {
+          section#home .nav-bar .nav-wrapper .nav-logo {
+            margin-left: 2rem; } }
+        section#home .nav-bar .nav-wrapper .nav-logo img {
+          height: 100%; }
+      section#home .nav-bar .nav-wrapper .nav-menu a {
+        color: #ffffff;
+        text-decoration: none;
+        margin-left: 1rem; }
+        section#home .nav-bar .nav-wrapper .nav-menu a:first-child {
+          margin-left: 0; }
+  section#home .home-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 4rem; }
+    section#home .home-wrapper #intro-container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-image: url(/assets/img/back_light.jpg);
+      background-size: cover;
+      background-attachment: fixed; }
+      section#home .home-wrapper #intro-container .intro-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 43%, rgba(255, 255, 255, 0.8) 56%, rgba(255, 255, 255, 0) 100%);
+        background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 43%, rgba(255, 255, 255, 0.8) 56%, rgba(255, 255, 255, 0) 100%);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 43%, rgba(255, 255, 255, 0.8) 56%, rgba(255, 255, 255, 0) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00feffff', endColorstr='#00ffffff',GradientType=0 );
+        width: 100vw;
+        padding: 0rem 0 5rem; }
+        section#home .home-wrapper #intro-container .intro-box .logo {
+          width: 40vw; }
+          @media (max-width: 800px) {
+            section#home .home-wrapper #intro-container .intro-box .logo {
+              display: none; } }
+          section#home .home-wrapper #intro-container .intro-box .logo img {
+            width: 100%;
+            filter: drop-shadow(0 0 0.6rem rgba(255, 255, 255, 0.3)); }
+        section#home .home-wrapper #intro-container .intro-box .intro {
+          width: 60vw;
+          color: #111;
+          font-weight: 400;
+          letter-spacing: 1px;
+          text-align: center; }
+          section#home .home-wrapper #intro-container .intro-box .intro .mobile-fat {
+            font-weight: bold; }
+        section#home .home-wrapper #intro-container .intro-box .cta {
+          margin-top: 1rem; }
+          section#home .home-wrapper #intro-container .intro-box .cta .cta-button {
+            text-decoration: none;
+            background: #3acdfe;
+            padding: 1rem 2rem;
+            box-shadow: 0px 4px rgba(0, 0, 0, 0.4);
+            color: white;
+            font-size: 1.4rem;
+            text-transform: uppercase; }
+    section#home .home-wrapper #audiobooks {
+      width: 100vw;
+      padding-top: 4rem;
+      background: #111; }
+      section#home .home-wrapper #audiobooks .top-selection {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center; }
+        section#home .home-wrapper #audiobooks .top-selection .container {
+          margin: 1rem auto;
+          width: 206px;
+          height: 300px;
+          position: relative;
+          perspective: 1000px; }
+          section#home .home-wrapper #audiobooks .top-selection .container #carousel {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            transform-style: preserve-3d;
+            animation: rotation 20s infinite linear; }
+            section#home .home-wrapper #audiobooks .top-selection .container #carousel:hover {
+              animation-play-state: paused; }
+            section#home .home-wrapper #audiobooks .top-selection .container #carousel figure {
+              display: block;
+              position: absolute;
+              width: 186px;
+              height: 186px;
+              left: -20px;
+              top: 10px;
+              background: black;
+              overflow: hidden;
+              -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5))); }
+              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(1) {
+                transform: rotateY(0deg) translateZ(288px); }
+              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(2) {
+                transform: rotateY(60deg) translateZ(288px); }
+              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(3) {
+                transform: rotateY(120deg) translateZ(288px); }
+              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(4) {
+                transform: rotateY(180deg) translateZ(288px); }
+              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(5) {
+                transform: rotateY(240deg) translateZ(288px); }
+              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(6) {
+                transform: rotateY(300deg) translateZ(288px); }
+              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure img {
+                cursor: pointer;
+                transition: all .5s ease;
+                width: 100%; }
+
+@keyframes rotation {
+  from {
+    transform: rotateY(0deg); }
+  to {
+    transform: rotateY(360deg); } }
+        section#home .home-wrapper #audiobooks .top-selection .sel {
+          margin: 0 1rem;
+          width: 200px; }
+          section#home .home-wrapper #audiobooks .top-selection .sel img {
+            transform-origin: left;
+            transform: rotate3d(0, 1, 0, 40deg);
+            width: 100%;
+            -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5))); }
