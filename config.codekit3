@@ -138,6 +138,17 @@
 		"oAP": "\/assets\/favicon.ico",
 		"oF": 0
 		},
+	"\/assets\/favicon.png": {
+		"ft": 32768,
+		"iS": 2627,
+		"oA": 0,
+		"oAP": "\/assets\/favicon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
 	"\/assets\/img\/audiobooks\/AB1.png": {
 		"ft": 32768,
 		"iS": 255444,
