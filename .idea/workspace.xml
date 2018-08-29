@@ -29,14 +29,14 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="js" value="971" />
-          <entry key="pug" value="1211" />
+          <entry key="pug" value="1217" />
           <entry key="sass" value="4752" />
           <entry key="scss" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Jade" value="1211" />
+          <entry key="Jade" value="1217" />
           <entry key="JavaScript" value="971" />
           <entry key="SCSS" value="11" />
           <entry key="Sass" value="4752" />
@@ -71,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/_includes/head.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="170">
-              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+              <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -264,12 +264,12 @@
       <workItem from="1533039685936" duration="2000" />
       <workItem from="1533635085918" duration="28362000" />
       <workItem from="1534362843760" duration="12000" />
-      <workItem from="1535553518981" duration="3726000" />
+      <workItem from="1535553518981" duration="3790000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34273000" />
+    <option name="totallyTimeSpent" value="34337000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1057" extended-state="0" />
@@ -363,7 +363,7 @@
     <entry file="file://$PROJECT_DIR$/_includes/head.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
-          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
+          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
         </state>
       </provider>
     </entry>
