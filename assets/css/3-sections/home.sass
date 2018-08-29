@@ -130,87 +130,115 @@ section#home
       justify-content: center
       overflow-x: hidden
       box-sizing: border-box
+      @media(max-width: 480px)
+        padding: 1rem
       p
         color: #ccc
         margin-bottom: 3rem
       .top-selection
-        display: flex
-        flex-direction: row
-        justify-content: center
-        align-items: center
+        display: inline-grid
+        grid-template-columns: auto auto auto
+        grid-gap: 10px
 
-        .container
-          margin: 1rem auto
-          width: 206px
-          height: 300px
-          position: relative
-          perspective: 1000px
-        
-          #carousel
+        width: 100%
+
+        @media(max-width: 800px)
+          display: block
+          width: 70%
+
+          .sel
+            padding: 1rem
+
+          @media(max-width: 480px)
             width: 100%
-            height: 100%
-            position: absolute
-            transform-style: preserve-3d
-            animation: rotation 20s infinite linear
-            transition: all 200ms ease-in-out
-            &:hover
-              animation-play-state: paused
 
-            figure
-              display: block
-              position: absolute
-              width: 186px
-              height: 186px
-              left: -20px
-              top: 10px
-              background: black
-              overflow: hidden
-              //border: solid 5px black
-              -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5)))
-              transition: transform 200ms ease-in-out
+        //flex-direction: column
+        //justify-content: center
+        //align-items: center
 
-
-              &:nth-child(1)
-                transform: rotateY(0deg) translateZ(288px)
-              &:nth-child(2)
-                transform: rotateY(60deg) translateZ(288px)
-              &:nth-child(3)
-                transform: rotateY(120deg) translateZ(288px)
-              &:nth-child(4)
-                transform: rotateY(180deg) translateZ(288px)
-              &:nth-child(5)
-                transform: rotateY(240deg) translateZ(288px)
-              &:nth-child(6)
-                transform: rotateY(300deg) translateZ(288px)
-
-              img
-                //-webkit-filter: grayscale(1)
-                cursor: pointer
-                transition: all .5s ease
-                width: 100%
-                //&:hover
-
-
-
-
-          @keyframes rotation
-            from
-              transform: rotateY(0deg)
-
-            to
-              transform: rotateY(360deg)
-
-        
 
         .sel
-          margin: 0 1rem
-          width: 200px
+          //width: 20%
+
+
           img
-            transform-origin: left
-            transform: rotate3d(0,1,0,40deg)
             width: 100%
-            -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5)))
-      .add-selection
+
+        //.container
+        //  margin: 1rem auto
+        //  width: 206px
+        //  height: 300px
+        //  position: relative
+        //  perspective: 1000px
+        //
+        //  #carousel
+        //    width: 100%
+        //    height: 100%
+        //    position: absolute
+        //    transform-style: preserve-3d
+        //    animation: rotation 20s infinite linear
+        //    transition: all 200ms ease-in-out
+        //    &:hover
+        //      animation-play-state: paused
+        //
+        //    figure
+        //      display: block
+        //      position: absolute
+        //      width: 186px
+        //      height: 186px
+        //      left: -20px
+        //      top: 10px
+        //      background: black
+        //      overflow: hidden
+        //      //border: solid 5px black
+        //      -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5)))
+        //      transition: transform 200ms ease-in-out
+        //
+        //
+        //      &:nth-child(1)
+        //        transform: rotateY(0deg) translateZ(288px)
+        //      &:nth-child(2)
+        //        transform: rotateY(60deg) translateZ(288px)
+        //      &:nth-child(3)
+        //        transform: rotateY(120deg) translateZ(288px)
+        //      &:nth-child(4)
+        //        transform: rotateY(180deg) translateZ(288px)
+        //      &:nth-child(5)
+        //        transform: rotateY(240deg) translateZ(288px)
+        //      &:nth-child(6)
+        //        transform: rotateY(300deg) translateZ(288px)
+        //
+        //      img
+        //        //-webkit-filter: grayscale(1)
+        //        cursor: pointer
+        //        transition: all .5s ease
+        //        width: 100%
+        //        //&:hover
+        //
+        //
+        //
+        //
+        //  @keyframes rotation
+        //    from
+        //      transform: rotateY(0deg)
+        //
+        //    to
+        //      transform: rotateY(360deg)
+        //
+        //
+
+        //.sel
+        //  margin: 0 1rem
+        //  width: 200px
+        //  img
+        //    transform-origin: left
+        //    transform: rotate3d(0,1,0,40deg)
+        //    width: 100%
+        //    -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5)))
+
+    .cta-audiobooks
+      margin-top: 2rem
+
     #labels
       z-index: 200
       width: 100vw

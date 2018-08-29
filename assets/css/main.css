@@ -143,70 +143,30 @@ section#home {
       justify-content: center;
       overflow-x: hidden;
       box-sizing: border-box; }
+      @media (max-width: 480px) {
+        section#home .home-wrapper #audiobooks {
+          padding: 1rem; } }
       section#home .home-wrapper #audiobooks p {
         color: #ccc;
         margin-bottom: 3rem; }
       section#home .home-wrapper #audiobooks .top-selection {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center; }
-        section#home .home-wrapper #audiobooks .top-selection .container {
-          margin: 1rem auto;
-          width: 206px;
-          height: 300px;
-          position: relative;
-          perspective: 1000px; }
-          section#home .home-wrapper #audiobooks .top-selection .container #carousel {
-            width: 100%;
-            height: 100%;
-            position: absolute;
-            transform-style: preserve-3d;
-            animation: rotation 20s infinite linear;
-            transition: all 200ms ease-in-out; }
-            section#home .home-wrapper #audiobooks .top-selection .container #carousel:hover {
-              animation-play-state: paused; }
-            section#home .home-wrapper #audiobooks .top-selection .container #carousel figure {
-              display: block;
-              position: absolute;
-              width: 186px;
-              height: 186px;
-              left: -20px;
-              top: 10px;
-              background: black;
-              overflow: hidden;
-              -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5)));
-              transition: transform 200ms ease-in-out; }
-              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(1) {
-                transform: rotateY(0deg) translateZ(288px); }
-              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(2) {
-                transform: rotateY(60deg) translateZ(288px); }
-              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(3) {
-                transform: rotateY(120deg) translateZ(288px); }
-              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(4) {
-                transform: rotateY(180deg) translateZ(288px); }
-              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(5) {
-                transform: rotateY(240deg) translateZ(288px); }
-              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure:nth-child(6) {
-                transform: rotateY(300deg) translateZ(288px); }
-              section#home .home-wrapper #audiobooks .top-selection .container #carousel figure img {
-                cursor: pointer;
-                transition: all .5s ease;
-                width: 100%; }
-
-@keyframes rotation {
-  from {
-    transform: rotateY(0deg); }
-  to {
-    transform: rotateY(360deg); } }
-        section#home .home-wrapper #audiobooks .top-selection .sel {
-          margin: 0 1rem;
-          width: 200px; }
-          section#home .home-wrapper #audiobooks .top-selection .sel img {
-            transform-origin: left;
-            transform: rotate3d(0, 1, 0, 40deg);
-            width: 100%;
-            -webkit-box-reflect: below 10px -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(70%, transparent), to(rgba(250, 250, 250, 0.5))); }
+        display: inline-grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 10px;
+        width: 100%; }
+        @media (max-width: 800px) {
+          section#home .home-wrapper #audiobooks .top-selection {
+            display: block;
+            width: 70%; }
+            section#home .home-wrapper #audiobooks .top-selection .sel {
+              padding: 1rem; } }
+  @media (max-width: 800px) and (max-width: 480px) {
+    section#home .home-wrapper #audiobooks .top-selection {
+      width: 100%; } }
+        section#home .home-wrapper #audiobooks .top-selection .sel img {
+          width: 100%; }
+    section#home .home-wrapper .cta-audiobooks {
+      margin-top: 2rem; }
     section#home .home-wrapper #labels {
       z-index: 200;
       width: 100vw;
